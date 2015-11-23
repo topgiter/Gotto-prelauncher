@@ -1,0 +1,102 @@
+<div class="nav_top">
+  <div class="logo">
+    <a href="https://www.grottoapp.com">
+      <%= image_tag 'home/logo_final.png', :id => 'pineapple' %>
+    </a>
+  </div> 
+</div> 
+<header id="header1">
+  <div class="navigation-bar">
+    <div class="container"></div>
+    <div class="clear"></div>
+  </div>
+  <!-- /Menu -->
+
+  <div class="container">
+    <!--Header content-->
+    <div class="tablet_header">
+      <h1 id="mobile_header"> Grotto makes marketing a profitable art form. </h1>
+      <h3 id="mobile_subtext"> Offer a tasting hour to new patrons and spread the good feeling.</h3>
+      <a href="mailto:mike@grottoapp.com">
+        <div class="refer" id="work_with"> 
+          <p class="work_text">Work with Grotto</p> 
+        </div>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="how_it_works">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 col-sm-push-5 wow fadeInDown">
+        <h2 id="how_mobile_center">How it Works</h2>
+        <ul class="features-pagination controls">
+          <li class="active">Grotto suggests your bar because it fits with a patron's preferences for the evening</li>
+          <li>New patrons pay a flat rate to try the bar for one hour </li>
+          <li>Patrons show their Grotto screen when ordering </li>
+          <li>Bar staff serves drink, rings as Grotto comp to keep track</li>
+        </ul>
+      </div>
+      <div class="col-sm-5 col-sm-pull-7">
+        <div class="slide-phone-holder">
+          <%= image_tag 'home/how_screen.png', :class=>'holder' %>
+          <div id="features-slider" class="images-list">                   
+            <%= image_tag 'home/phone2.png', :class=>'screen', data: { index: "0" } %>
+            <%= image_tag 'home/phone1.png', :class=>'screen', data: { index: "1" } %>
+            <%= image_tag 'home/phone.jpg', :class=>'screen', data: { index: "2" } %>
+            <%= image_tag 'home/phone.jpg', :class=>'screen', data: { index: "3" } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+<div class="perks">
+  <h3 class="perks_text" id="perks_text"> Perks </h3>
+  <div class="perks-list">
+    <ul class="perks_list">
+      <li>Offer a great deal to new patrons</li><br>
+      <li>Grotto patrons average 2-3 drinks per hour so it's always profitable </li><br>
+      <li> Grotto patrons come in groups of 2 or 3 </li><br>
+      <li> Grotto patrons leave a mandatory 20% tip </li><br>
+    </ul>
+  </div>
+</div>
+<div class="how_it_works">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 col-sm-push-5 wow fadeInDown">
+        <h2 id="how_mobile_center">Easy Payments</h2>
+        <p></p>
+        <ul class="features-pagination controls">
+          <li class="active paymentli"> Grotto charges patrons, pays you twice a week, and handles the back office. Forget checks, chargebacks, and lost credit cards. </li>
+          <li class="active"id="paymentsli">Grotto charges the patrons, you'll never write checks again</li>
+          <li>Payments are twice weekly, but we'll be rolling out daily soon </li>
+          <li>Grotto hanldes all back office work - you'll never worry about chargebacks, lost cards, etc. </li>
+        </ul>                    
+      </div>
+      <div class="col-sm-5 col-sm-pull-7">
+        <%= image_tag 'home/dog-pineapple.png', :class=>'holder' %>
+      </div>
+    </div>
+  </div>
+</div>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <%= image_tag 'home/footer_logo.png', :class=>'footer_logo footer_logo_mobile' %>
+      </div>
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <ul class="quick-links">
+            <li><%= link_to 'Faq', venues_faq_path %></li>
+            <li><%= link_to 'Terms', terms_users_path %></li>
+            <li><a href="#">Privacy Policy</a></p></li>
+          </ul>    
+        </div>
+        <div class="col-sm-12"></div>         
+      </div>  
+    </div>
+  </div>
+</footer>

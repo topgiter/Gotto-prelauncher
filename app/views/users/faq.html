@@ -1,0 +1,77 @@
+<header id="header" class="custom">
+  <div class="container">
+    <div class="logo text-center">
+      <a href="/">
+        <%= image_tag 'home/logo_final.png', :style => 'width:60%; max-width:200px;', :id => 'pineapple' %>
+      </a>
+    </div> 
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h1>FAQ</h1>              
+      </div>
+    </div>    
+  </div>  
+</header>
+<div id="site-wrap">
+  <section class="general-text text-padding">
+  	<div class="container">
+    	<div class="row">
+     	    <div class="col-sm-12">
+          	<div class="text-content">
+              <h2>WHAT IS GROTTO?</h2>
+				      <p>Grotto lets you book an on-demand happy hour anywhere in NYC whenever you want for $20.</p>
+				    </div>
+            <div class="border"></div>
+            <div class="text-content">
+              <h2>WHAT BARS ARE ON GROTTO?</h2>
+					    <p>GROTTO has partnered with some of the best bars in The City. For the most updated list, check your app - we're adding new venues every week.</p>
+				    </div>
+            <div class="border"></div>
+          	<div class="text-content">
+              <h2>HOW DOES IT WORK?</h2>
+    					<p>Choose a spot and purchase when you're ready to order your first drink. Show your timer screen to the bartender and place an order.</p>
+    				</div>
+            <div class="border"></div>  
+      	    <div class="text-content">
+            	<h2>CAN I ORDER DRINKS FOR FRIENDS?</h2>
+    					<p>This is your personal happy hour. If friends want to join, just have them download the app! </p>
+    				</div>
+            <div class="border"></div>
+        	  <div class="text-content">
+            	<h2>WHAT CAN I ORDER?</h2>
+    					<p>What can I drink: Signature cocktails, beers, and most wines. No topshelf liquor or Dom Pérignon. </p>
+    				</div>
+            <div class="border"></div>
+      	    <div class="text-content">
+            	<h2>WHAT HAPPENS AFTER THE HOUR?</h2>
+    					<p>That’s up to you! Your tab is paid with tax and gratuity included. </p>
+    				</div>
+            <div class="border"></div>                                        
+        	  <div class="text-content">
+					    <p>Don't see an answer for what you're looking for?</p>
+              <p class="margin-top40">Email <a href="mailto:team@grottoapp.com" class="highlight">team@grottoapp.com</a></p>
+				    </div>                                        
+          </div>
+      </div>
+    </div>  
+  </section>
+</div>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <%= image_tag 'home/pineapple.png', :class=>'footer_logo' %>
+      </div>
+      <div class="col-sm-12">
+        <ul class="quick-links">
+          <li><%= link_to 'Faq', faq_users_path %></li>
+          <li><%= link_to 'Press Kit', presskit_users_path %></li>
+          <li><%= link_to 'Terms', terms_users_path %></li>
+          <li><p class="copyright">© Grotto 2015 <%= link_to 'Privacy Policy' %></p></li>
+        </ul>    
+      </div>
+      <div class="col-sm-12">
+      </div>         
+    </div>  
+  </div>     
+</footer>

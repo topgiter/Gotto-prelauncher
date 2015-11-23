@@ -1,0 +1,103 @@
+<div id="site_wrapper">
+  <div class="home-header">
+    <div class="header-top text-center">
+      <%= image_tag 'home/logo.png' %>
+      <span>THANK YOU FOR SIGNING UP</span>
+    </div>
+  </div>
+  <div class="row refer-wrapper">
+    <div class="col-md-6 col-sm-12 wrapper-left">
+      <div class="col-md-6">
+        <span class="wrapper-left-text">SHAVING IS EVOLVING</span>
+      </div>
+      <div class="col-md-6 wrapper-left-dog">
+        <%= image_tag 'home/dog.png' %>
+      </div>
+    </div>
+  <div class="col-md-6 col-sm-12 wrapper-right">
+    <div class="share-wrap">
+      <p class="subtitle brandon">DON'T LEAVE YOUR FRIEDNS BEHIND</p>
+      <p class="why brandon">INVITE FRIENDS & EARN PRODUCT</p>
+      <p class="subtitle brandon">Share your unique link via email, Facebook<br>or Twitter and earn Grotto's tasting hour for<br>each friend who signs up.</p>
+      <div class="copy-link brandon">grottoapp.herokuapp.com/?ref=<%= current_user.referral_code %></div>
+      <div class="social-links">
+        <a href="http://www.facebook.com" class="fb" target="_blank"></a>
+        <div class="sep"></div>
+        <a href="http://twitter.com/" class="twit" target="_blank"></a>
+      </div>
+    </div>  
+  </div>
+</div>
+
+<% 
+  referrals_count = current_user.referrals.count
+  stops = User::REFERRAL_STEPS
+  found = nil
+  stops.reverse_each do |stop|
+    if stop["count"] <= referrals_count and !found
+      stop["selected"] = true
+      found = stop
+    else
+      stop["selected"] = false
+    end
+  end
+%>
+<div class="row prizes <% if found %>prize-<%= found["class"] %><% end %>">
+
+  <div class="row page-content">
+    <p class="callout brandon">Here's How It Works:</p>
+    <div class="row" style="padding-left: 25px; padding-right: 25px;">
+      <ul class="products row">
+        <div class="col-xs-3 col-xxs-12">
+          <li class="title brandon text-center">
+            <div>
+              <span class="friends">FRIENDS JOINED</span>
+            </div>
+            <div class="earned">
+              <span class="rewards">GROTTO HOURS <br>EARNED</span>
+            </div>  
+          </li>
+        </div>
+        
+        <% stops.each do |stop| %>
+          <div class="col-xs-3 col-xxs-12">
+            <li class="product brandon text-center <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
+              <div class="circle"><%= stop["count"] %></div>
+              <div class="sep"></div>
+              <span>
+                <div class="menu">
+                  <%= stop["html"].html_safe %>
+                </div>
+              </span>
+              <!-- <div class="tooltip">
+                <img src="<%= stop["image"] %>" height="254">
+              </div> -->
+            </li>
+          </div>
+        <% end %>
+      </ul>
+      <div class="progress">
+        <div class="mover">
+          <div class="bar clearfix"></div>
+        </div>
+      </div>
+      <% 
+        words = ''
+        if referrals_count == 1
+          words = 'friend has'
+        elsif 
+          words = 'friends have'
+        end
+      %>
+      </div>
+    </div>
+    <div class="row">
+      <% if referrals_count == 0 %>
+        <p class="place brandon"><span>No</span> friends have joined yet...</p>
+      <% else %>
+        <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
+      <% end %>
+      <p class="check brandon">Keep checking</p>
+    </div>
+</div>
+ 

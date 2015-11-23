@@ -1,0 +1,89 @@
+<header id="header" class="custom">
+    <div class="container">
+      <div class="logo text-center">
+        <a href="index.html">
+          <%=image_tag 'home/main-logo2.png', :style => 'width:60%; max-width:200px;', :id => 'pineapple' %>
+        </a>
+      </div> 
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h1>FAQ</h1>              
+        </div>
+      </div>    
+    </div>  
+</header>
+
+<div id="site-wrap">
+
+  <!--General text-->
+  <section class="general-text text-padding">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="text-content">
+                      <h2>So Grotto is a Happy Hour? </h2>
+            <h5>Sort of. Your Grotto price can move over the course of the night, so while you may want to use Grotto to boost your happy hour traffic, Grotto is just as useful later in the night. In fact, Grotto is great when you are slammed because it is about 3 times faster than ringing a normal drink, charging a card and waiting for a signature. Grotto keeps your staff selling drinks, not waiting on tabs.</h5>
+          </div>
+                    <div class="border"></div>
+                  <div class="text-content">
+                      <h2>Where can I see how much we’re making?</h2>
+            <h5>You can always login to your sales dashboard on venues.grottoapp.com. In addition, you’ll get an automatic manager-report every night with the number of patrons and each amount broken out, from Venue Revenue to Staff Gratuity to Tax, all in one place.</h5>
+          </div>
+                    <div class="border"></div>
+                  <div class="text-content">
+                      <h2>How do I get paid?</h2>
+            <h5>Grotto pays venues twice-weekly through direct deposit or physical check. As you know, you’ll get a Manager Report every night and then the funds will transfer twice a week. We’re working to increase this to daily transfers and we’ll be there soon!</h5>
+          </div>
+                    <div class="border"></div>  
+                  <div class="text-content">
+                      <h2>Can people cheat with a screenshot?</h2>
+            <h5>The Grotto Drinking screen has several secure features. First of all, it has a rapidly-moving animation, which does not show up on a screenshot. Second, the screen clearly displays the time the open bar ends. Finally, the screen displays the name and face of the person booking it. </h5>
+          </div>
+                    <div class="border"></div>
+                  <div class="text-content">
+                      <h2>How many drinks do people get?</h2>
+            <h5>Grotto is about taking the pressure off, not encouraging speedy drinking. You can expect Grotto clients to have anywhere between 2 and 3 drinks per person, per hour.  </h5>
+          </div>
+                    <div class="border"></div>
+                  <div class="text-content">
+                      <h2>Can people share it with friends?</h2>
+            <h5>Each patron needs his or her own app. But don’t worry- Grotto makes it easy for your patrons to share it, and we even give them a bonus whenever they do. </h5>
+          </div>
+                      <div class="border"></div>
+                    <div class="text-content">
+                        <h2>What if someone is drunk?</h2>
+                        <h5>Just like if a normal patron has had too much, your staff can escort that patron out or refuse service. We’ll handle refund request out of our own pocket.</h5>
+                    </div>
+                    <div class="border"></div>                                        
+                  <div class="text-content">
+            <h5>Don't see an answer for what you're looking for?</h5>
+                        <h5 class="margin-top40">Email <a href="mailto:team@grottoapp.com" class="highlight">team@grottoapp.com</a></h5>
+          </div>                                        
+                                                                              
+                </div>
+            </div>
+        </div>  
+          
+    </section>
+    <!--/General text-->
+
+</div>
+<footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <%=image_tag 'home/pineapple.png', :class => 'footer_logo' %>
+        </div>
+        <div class="col-sm-12">
+          <ul class="quick-links">
+            <li><%= link_to 'Faq', venues_faq_path %></li>
+            <li><%= link_to 'Press Kit', presskit_users_path %></li>
+            <li><%= link_to 'Terms', terms_users_path %></li>
+            <li><p class="copyright">© Grotto 2015 <a href="#">Privacy Policy</a></p></li>
+          </ul>    
+        </div>
+        <div class="col-sm-12"></div>         
+      </div>  
+    </div>     
+</footer>
+<!--/Site wrap-->

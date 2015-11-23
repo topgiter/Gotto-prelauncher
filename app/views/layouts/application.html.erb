@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="<%= @bodyId %>">
+  <head>
+    <title>Grotto</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
+    <% if @is_mobile %>
+        <% if @bodyId == 'home' %>
+          <meta name="viewport" content="width=1600" />
+        <% else %>
+          <meta name="viewport" content="width=1120" />
+        <% end %>
+    <% end %>
+
+    <script src="//cdn.optimizely.com/js/2520960085.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic,300italic,600italic' rel='stylesheet' type='text/css'>
+    <%= favicon_link_tag 'home/favicon.ico' %>
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '779098715511025');
+      fbq('track', "PageView");
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=779098715511025&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <script> 
+      fbq('track', 'CompleteRegistration');
+    </script>
+    <%= stylesheet_link_tag 'application', :media => 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body id="<%= @bodyId %>">
+      <%= content_for?(:error_header) ? '' : (render 'layouts/messages') %>
+    <%= yield %>
+  </body>
+</html>
