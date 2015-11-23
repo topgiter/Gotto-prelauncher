@@ -23,8 +23,7 @@ class UsersController < ApplicationController
       end
       
       if cur_ip.count > 2
-        # flash[:notice] = "You tried to sign up twice with same ip address"
-        return redirect_to root_path, :alert => "You tried to sign up twice with same ip address."
+        return redirect_to root_path
       else
         cur_ip.count = cur_ip.count + 1
         cur_ip.save
