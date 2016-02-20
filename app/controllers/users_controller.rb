@@ -22,15 +22,15 @@ class UsersController < ApplicationController
         )
       end
       
-      if cur_ip.count > 2
-        return redirect_to root_path
+      if cur_ip.count > 1
+        return redirect_to root_path, :alert => "You tried to sign up twice with same ip address."
       else
         cur_ip.count = cur_ip.count + 1
         cur_ip.save
       end
 
       referred_by = User.find_by_referral_code(params[:ref])
-
+      
       if referred_by
         referred_by.referral_registered_number += 1
         referred_by.save

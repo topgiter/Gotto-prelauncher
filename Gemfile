@@ -13,13 +13,13 @@ gem 'activeadmin'
 # Gems used only for assets and not required
 # in production environments by default.
 
-  gem 'sass-rails'
-  gem 'coffee-rails'
+gem 'sass-rails'
+gem 'coffee-rails'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-  gem 'therubyracer'
-  gem 'uglifier', '>= 1.0.3'
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', :platforms => :ruby
+gem 'therubyracer'
+gem 'uglifier', '>= 1.0.3'
 
 
 group :production do
