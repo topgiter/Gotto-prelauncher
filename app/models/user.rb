@@ -14,19 +14,19 @@ class User < ActiveRecord::Base
 
   REFERRAL_STEPS = [
     {
-      'count' => 7,
+      'count' => 1,
       "html" => "Free Grotto Hour",
       "class" => "two"
       # "image" =>  ActionController::Base.helpers.asset_path("home/pit_1.png")
     },
     {
-      'count' => 15,
+      'count' => 2,
       "html" => "Free Grotto Hour<br>For You And 3 Friends",
       "class" => "three"
       # "image" => ActionController::Base.helpers.asset_path("home/pit_truggle.png")
     },
     {
-      'count' => 25,
+      'count' => 3,
       "html" => "Free Grotto<br>For A Month",
       "class" => "four"
       # "image" => ActionController::Base.helpers.asset_path("home/pit_stuggle_fast.png")
